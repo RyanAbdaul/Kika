@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="CSS/master.css">
 </head>
 <body>
-  <div class="page d-flex">
+  <div class="page d-flex txt-capitalize">
     <nav name="side-bar" class="bg-white p-20 relative">
       <h3 class="relative txt-c mt-0">Kika</h3>
       <ul class="pl-0 fw-500">
@@ -111,14 +111,174 @@
               <p>earned</p>
             </div>
           </div>
-          <a href="profile.html" class="visit bg-blue btn-shape">
-            Profile
-          </a>
+          <a href="profile.html" class="visit bg-blue btn-shape">Profile</a>
         </div>
         <!-- End Welcome -->
         <!-- Start Draft -->
-        <div class="draft bg-white"></div>
+        <div class="quick-draft box-style block-mobile">
+          <h2 class="mb-10">Quick Draft</h2>
+          <p class="mb-20 c-888">Write A Draft For Your Ideas</p>
+          <form class="d-flex j-c direction-col gap-20">
+            <input class="rad-6 p-10 bg-eee" type="text" placeholder="Title">
+            <textarea class="rad-6 p-10 bg-eee" placeholder="Your Thought"></textarea>
+          </form>
+          <a href="" class="visit bg-blue btn-shape">Save</a>
+        </div>
         <!-- End Draft -->
+        <!-- Start Targets -->
+        <div class="yearly-targets box-style block-mobile">
+          <h2>Yearly Tragets</h2>
+          <p>Targets of the year</p>
+          <div class="target d-flex align-c gap-10 mb-20">
+            <i class="fa-solid fa-dollar-sign c-blue d-flex j-c align-c"></i>
+            <div class="prog">
+              <h4 class="fs-14 c-888 mb-10">Money</h4>
+              <span class="fw-600">$25000</span>
+              <div class="score money-score w-full mt-10">
+                <span class="bg-blue h-full d-block relative" data-progress="80%"></span>
+              </div>
+            </div>
+          </div>
+          <div class="target d-flex align-c gap-10 mb-20">
+            <i class="fa-solid fa-code fa-lg c-orange"></i>
+            <div class="prog">
+              <h4 class="fs-14 c-888 mb-10">Projects</h4>
+              <span class="fw-600">80</span>
+              <div class="score project-score w-full mt-10">
+                <span class="bg-orange h-full d-block relative" data-progress="55%"></span>
+              </div>
+            </div>
+          </div>
+          <div class="target d-flex align-c gap-10 mb-20">
+            <i class="fa-solid fa-user fa-lg c-green"></i>
+            <div class="prog">
+              <h4 class="fs-14 c-888 mb-10">Team</h4>
+              <span class="fw-600">17</span>
+              <div class="score team-score w-full mt-10">
+                <span class="bg-green h-full d-block relative" data-progress="75%"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- End Targets -->
+        <!-- Start Ticket Statistics -->
+        <div class="tick-stats block-mobile box-style">
+          <h2>tickets Statistics</h2>
+          <p>Everything About Support Tickets</p>
+          <div class="row direction-col-mobile d-flex gap-20 mb-20">
+            <div class="box d-flex align-c direction-col p-20">
+              <i class="fa-regular fa-rectangle-list fa-2x mb-10 c-orange"></i>
+              <span>2500</span>
+              <p class="fs-14 c-888">Total</p>
+            </div>
+            <div class="box d-flex align-c direction-col p-20">
+              <i class="fa-solid fa-spinner mb-10 c-blue"></i>
+              <span class="fs-14">500</span>
+              <p class="fs-14 c-888">Pending</p>
+            </div>
+          </div>
+          <div class="row direction-col-mobile d-flex gap-20">
+            <div class="box d-flex align-c direction-col p-20">
+              <i class="fa-regular fa-circle-check mb-10 c-green"></i>
+              <span class="fs-14">1900</span>
+              <p class="fs-14 c-888">Closed</p>
+            </div>
+            <div class="box d-flex align-c direction-col p-20">
+              <i class="fa-solid fa-square-xmark mb-10 c-red"></i>
+              <span class="fs-14">91</span>
+              <p class="fs-14 c-888">Deleted</p>
+            </div>
+          </div>
+        </div>
+        <!-- End Ticket Statistics -->
+        <!-- Start Latest News -->
+        <div class="latest-news block-mobile box-style">
+          <h2>Latest News</h2>
+          <div class="box direction-col-mobile txt-c-mobile d-flex align-c gap-20 mb-15 mt-15">
+              <img class="rad-6" src="imgs/news-01.png" alt="">
+            <div class="text">
+              <h3 class="mb-10">Created SASS section</h3>
+              <p class="c-888">New SASS Examples & Tutorials</p>
+            </div>
+            <span class="time btn-shape bg-eee c-black">3 days ago</span>
+          </div>
+          <hr class="bg-eee">
+          <div class="box direction-col-mobile txt-c-mobile d-flex align-c gap-20 mb-15 mt-15">
+              <img class="rad-6" src="imgs/news-02.png" alt="">
+            <div class="text">
+              <h3 class="mb-10">Changed The Design</h3>
+              <p class="c-888">A new brand website design</p>
+            </div>
+            <span class="time btn-shape bg-eee c-black">5 days ago</span>
+          </div>
+          <hr class="bg-eee">
+          <div class="box direction-col-mobile txt-c-mobile d-flex align-c gap-20 mb-15 mt-15">
+              <img class="rad-6" src="imgs/news-03.png" alt="">
+            <div class="text">
+              <h3 class="mb-10">Team Increased
+              </h3>
+              <p class="c-888">3 Developers Joined The Team
+              </p>
+            </div>
+            <span class="time btn-shape bg-eee c-black">8 days ago</span>
+          </div>
+          <hr class="bg-eee">
+          <div class="box direction-col-mobile txt-c-mobile d-flex align-c gap-20 mt-15">
+            <img class="rad-6" src="imgs/news-04.png" alt="">
+            <div class="text">
+              <h3 class="mb-10">Added Payment Gateway
+              </h3>
+              <p class="c-888">Many New Payment Gateways Added
+              </p>
+            </div>
+            <span class="time btn-shape bg-eee c-black">15 days ago</span>
+          </div>
+        </div>
+        <!-- End Latest News -->
+        <!-- Start Latest News -->
+        <div class="latest-tasks block-mobile box-style">
+          <h2>Latest News</h2>
+          <div class="box d-flex align-c mb-20 mt-20">
+            <div class="text">
+              <h3 class="mb-10 fs-16">Record One New Video</h3>
+              <p class="c-888 fs-16">Record Python Create Exe Project</p>
+            </div>
+            <i class="fa-regular fa-trash-can"></i>
+          </div>
+          <hr class="bg-eee border-none">
+          <div class="box d-flex align-c mb-20 mt-20">
+            <div class="text">
+              <h3 class="mb-10 fs-16">Write Article</h3>
+              <p class="c-888 fs-16">Write Low Level vs High Level Languages</p>
+            </div>
+            <i class="fa-regular fa-trash-can"></i>
+          </div>
+          <hr class="bg-eee border-none">
+          <div class="box d-flex align-c mb-20 mt-20">
+            <div class="text">
+              <h3 class="mb-10 fs-16">Finish Project</h3>
+              <p class="c-888 fs-16">Publish Academy Programming Project</p>
+            </div>
+            <i class="fa-regular fa-trash-can"></i>
+          </div>
+          <hr class="bg-eee border-none">
+          <div class="box d-flex align-c mb-20 mt-20">
+            <div class="text">
+              <h3 class="mb-10 fs-16">Attend The Meeting</h3>
+              <p class="c-888 fs-16">Attend The Project Business Analysis Meeting</p>
+            </div>
+            <i class="fa-regular fa-trash-can"></i>
+          </div>
+          <hr class="bg-eee border-none">
+          <div class="box d-flex align-c mt-20">
+            <div class="text">
+              <h3 class="mb-10 fs-16">Finish Lesson</h3>
+              <p class="c-888 fs-16">Finish Teaching Flex Box</p>
+            </div>
+            <i class="fa-regular fa-trash-can"></i>
+          </div>
+        </div>
+        <!-- End Latest News -->
       </div>
       <!-- End The Content -->
     </main>

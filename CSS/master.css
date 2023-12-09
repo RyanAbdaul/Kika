@@ -1,12 +1,12 @@
 /* Start Variables */
 :root {
   --main-duration: 0.3s;
-    --blue-color: #0075ff;
-    --blue-alt-color: #0d69d5;
-    --orange-color: #f59e0b;
-    --green-color: #22c55e;
-    --red-color: #f44336;
-    --grey-color: #888;
+  --blue-color: #0075ff;
+  --blue-alt-color: #0d69d5;
+  --orange-color: #f59e0b;
+  --green-color: #22c55e;
+  --red-color: #f44336;
+  --grey-color: #888;
 }
 /* End Variables */
 /* Start Global Rules */
@@ -156,6 +156,9 @@ nav li a.active {
     width: 40px;
     padding: 10px !important;
   }
+  nav ul {
+    position: fixed;
+  }
   nav h3 {
     font-size: 13px;
     margin-bottom: 15px;
@@ -248,6 +251,7 @@ main header input[type="search"]:focus::placeholder {
     gap: 10px;
   }
 }
+/* End Wrapper */
 /* Start Welcome  */
 .wrapper .welcome .intro {
   background-color: #eee;
@@ -303,8 +307,165 @@ main header input[type="search"]:focus::placeholder {
   }
 }
 /* End Welcome  */
-/* End Wrapper */
-
+/* Start Quick Draft */
+.quick-draft form input {
+  border: 0;
+}
+.quick-draft form textarea {
+  height: 180px;
+  border: 0;
+}
+/* End Quick Draft */
+/* Start Yearly Targets */
+.yearly-targets .target > i {
+  width: 50px;
+  height: 50px;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+}
+.yearly-targets i.c-green,
+.yearly-targets .team-score {
+  background-color: #22c55e6b;
+}
+.yearly-targets i.c-blue,
+.yearly-targets .money-score {
+  background-color: #0077ff74;
+}
+.yearly-targets i.c-orange,
+.yearly-targets .project-score {
+  background-color: #f59f0b7e;
+}
+.yearly-targets .prog {
+  width: 100%;
+}
+.yearly-targets .prog .score {
+  height: 5px;
+}
+.yearly-targets .prog .score span.bg-blue {
+  width: 80%;
+}
+.yearly-targets .prog .score span.bg-orange {
+  width: 55%;
+}
+.yearly-targets .prog .score span.bg-green {
+  width: 75%;
+}
+.yearly-targets .prog .score span.bg-blue::before,
+.yearly-targets .prog .score span.bg-green::before,
+.yearly-targets .prog .score span.bg-orange::before
+{
+  content: attr(data-progress);
+  position: absolute;
+  right: -20px;
+  top: -40px;
+  width: 40px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+}
+.yearly-targets .prog .score span.bg-orange::before {
+  background-color: var(--orange-color);
+}
+.yearly-targets .prog .score span.bg-blue::before {
+  background-color: var(--blue-color);
+}
+.yearly-targets .prog .score span.bg-green::before {
+  background-color: var(--green-color);
+}
+.yearly-targets .prog .score span.bg-blue::after,
+.yearly-targets .prog .score span.bg-green::after,
+.yearly-targets .prog .score span.bg-orange::after
+{
+  content: '';
+  position: absolute;
+  right: -10px;
+  border: 10px solid;
+  top: -13px;
+}
+.yearly-targets .prog .score span.bg-blue::after {
+  border-color: var(--blue-color) transparent transparent transparent;
+}
+.yearly-targets .prog .score span.bg-green::after {
+  border-color: var(--green-color) transparent transparent transparent;
+}
+.yearly-targets .prog .score span.bg-orange::after {
+  border-color: var(--orange-color) transparent transparent transparent;
+}
+/* End Yearly Targets */
+/* Start Tickets Stats  */
+.tick-stats .row .box {
+  flex: 1;
+  border: 2px solid #eee;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+.tick-stats .row .box i {
+  font-size: 35px;
+}
+.tick-stats .row .box span {
+  font-size: 25px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+/* End Tickets Stats  */
+/* Start Latest News  */
+.latest-news img {
+  max-width: 120px;
+}
+.latest-news span.time {
+  margin: 0 0 0 auto;
+}
+@media (max-width: 767px) {
+  .latest-news span.time {
+    margin: 0 auto;
+  }
+}
+.latest-news hr {
+  height: 1px;
+  border: 0;
+}
+/* End Latest News */
+/* Start Latest Tasks*/
+.latest-tasks .box:nth-of-type(4) .text h3 {
+  color: var(--grey-color);
+  text-decoration: line-through;
+}
+.latest-tasks .box:nth-of-type(4) .text p {
+  color: var(--grey-color);
+  text-decoration: line-through;
+}
+.latest-tasks .box:nth-of-type(4) i {
+  color: var(--grey-color);
+}
+.latest-tasks i {
+  margin: 0 0 0 auto;
+  cursor: pointer;
+  transition: var(--main-duration);
+  -webkit-transition: var(--main-duration);
+  -moz-transition: var(--main-duration);
+  -ms-transition: var(--main-duration);
+  -o-transition: var(--main-duration);
+}
+.latest-tasks .box:not(:nth-of-type(4)) i:hover {
+  color: var(--red-color);
+}
+.latest-tasks hr {
+  height: 1px;
+}
+/* End Latest Tasks */
 
 
 

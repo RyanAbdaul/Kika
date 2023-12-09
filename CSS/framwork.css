@@ -19,6 +19,9 @@
 .align-e {
   align-items: end;
 }
+.j-c {
+  justify-content: center;
+}
 .j-bet {
   justify-content: space-between;
 }
@@ -28,12 +31,20 @@
 .j-eve {
   justify-content: space-evenly;
 }
+.direction-col {
+  flex-direction: column;
+} 
 .d-block {
   display: block;
 }
 @media (max-width: 767px) {
   .block-mobile {
     display: block;
+  }
+}
+@media (max-width: 767px) {
+  .direction-col-mobile {
+    flex-direction: column;
   }
 }
 /* End Box  */
@@ -54,26 +65,35 @@
 .p-20 {
   padding: 20px;
 }
-.m-20 {
-  margin: 20px;
-}
 .mt-0 {
   margin-top: 0px;
 }
-.mb-20 {
-  margin-bottom: 20px;
+.mt-10 {
+  margin-top: 10px;
+}
+.mt-15 {
+  margin-top: 15px;
 }
 .mt-20 {
   margin-top: 20px;
 }
+.mr-10 {
+  margin-right: 10px;
+}
 .mb-10 {
   margin-bottom: 10px;
+}
+.mb-15 {
+  margin-bottom: 15px;
+}
+.mb-20 {
+  margin-bottom: 20px;
 }
 .ml-10 {
   margin-left: 10px;
 }
-.mr-10 {
-  margin-right: 10px;
+.m-20 {
+  margin: 20px;
 }
 /* End Padding + Margin */
 
@@ -81,8 +101,32 @@
 .c-white {
   color: #fff;
 }
+.c-888 {
+  color: #888;
+}
+.c-orange {
+  color: var(--orange-color);
+}
+.c-red {
+  color: var(--red-color);
+}
+.c-blue {
+  color: var(--blue-color);
+}
+.c-green {
+  color: var(--green-color);
+}
+.c-black {
+  color: black !important;
+}
 .bg-blue {
   background-color: var(--blue-color);
+}
+.bg-green {
+  background-color: var(--green-color);
+}
+.bg-orange {
+  background-color: var(--orange-color);
 }
 .bg-eee{
   background-color: #eee;
@@ -111,11 +155,20 @@
 .absolute {
   position: absolute;
 }
+.z-1 {
+  z-index: 1;
+}
 /* End Position */
 
 /* Start Font */
 .fs-14 {
   font-size: 14px;
+}
+.fs-16 {
+  font-size: 16px;
+}
+.fs-18 {
+  font-size: 18px;
 }
 .txt-c {
   text-align: center;
@@ -125,6 +178,9 @@
 }
 .txt-r {
   text-align: right;
+}
+.txt-capitalize {
+  text-transform: capitalize;
 }
 .fw-300 {
   font-weight: 300;
@@ -152,6 +208,9 @@
 /* End Font */
 
 /* Start Border */
+.border-none {
+  border: 0;
+}
 .rad-6 {
   border-radius: 6px;
   -webkit-border-radius: 6px;
@@ -222,5 +281,27 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+/* .main-title */
+.wrapper h2 {
+  margin-bottom: 10px;
+  text-transform: capitalize;
+}
+.wrapper h2 + p {
+  color: #888;
+  margin-bottom: 20px;
+  text-transform: capitalize;
+}
+/* .main-title  bg-white rad-10 p-20 block-mobile relative o-hidden*/
+.box-style {
+  background-color: white;
+  overflow: hidden;
+  padding: 20px;
+  position: relative;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
 }
 /* End Component  */
