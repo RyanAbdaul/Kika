@@ -1,6 +1,7 @@
 /* Start Variables */
 :root {
   --main-duration: 0.3s;
+  --main-border-c: 1px solid #eee;
   --blue-color: #0075ff;
   --blue-alt-color: #0d69d5;
   --orange-color: #f59e0b;
@@ -27,6 +28,7 @@ a {
 }
 ul {
   list-style: none;
+  padding: 0;
 }
 ::-webkit-scrollbar {
   width: 15px;
@@ -62,44 +64,6 @@ h1::after {
 .page {
   background-color: #f1f5f9;
   min-height: 100vh;
-}
-.container,
-.container-fluid,
-.container-xxl,
-.container-xl,
-.container-lg,
-.container-md,
-.container-sm {
-    width: 100%;
-    padding-right: 15px;
-    padding-left: 15px;
-    margin-right: auto;
-    margin-left: auto;
-}
-@media (min-width: 576px) {
-    .container-sm, .container {
-        max-width: 540px;
-    }
-}
-@media (min-width: 768px) {
-    .container-md, .container-sm, .container {
-        max-width: 720px;
-    }
-}
-@media (min-width: 992px) {
-    .container-lg, .container-md, .container-sm, .container {
-        max-width: 960px;
-    }
-}
-@media (min-width: 1200px) {
-    .container-xl, .container-lg, .container-md, .container-sm, .container {
-        max-width: 1140px;
-    }
-}
-@media (min-width: 1400px) {
-    .container-xxl, .container-xl, .container-lg, .container-md, .container-sm, .container {
-        max-width: 1320px;
-    }
 }
 /* End Global Rules */
 
@@ -372,6 +336,7 @@ main header input[type="search"]:focus::placeholder {
   -moz-border-radius: 6px;
   -ms-border-radius: 6px;
   -o-border-radius: 6px;
+  font-size: 13px;
 }
 .yearly-targets .prog .score span.bg-orange::before {
   background-color: var(--orange-color);
@@ -466,10 +431,134 @@ main header input[type="search"]:focus::placeholder {
   height: 1px;
 }
 /* End Latest Tasks */
+/* Start Latest Upload */
+.latest-uploads .row img {
+  width: 40px;
+}
+.latest-uploads .row .text {
+  flex: 1;
+}
+/* End Latest Upload */
+/* Start Projress */
+.projress img {
+  opacity: 0.3;
+  width: 400px;
+  right: 10px;
+}
+.projress ul {
+  padding-left: 20px;
+}
+.projress ul::before {
+  content: '';
+  height: calc(100% - 40px);
+  width: 2px;
+  background-color: var(--blue-color);
+  position: absolute;
+  left: 0;
+  top: 30px;
+}
+.projress ul li:not(.on-progress, .not-done):before,
+.projress ul li.on-progress:before,
+.projress ul li.not-done:before {
+  content: '';
+  position: absolute;
+  left: -29px;
+  width: 15px;
+  height: 15px;
+  background-color: var(--blue-color);
+  border: 2px solid #fff;
+  outline: 2px solid var(--blue-color);
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  transform: translateX(1.2px);
+  -webkit-transform: translateX(1.2px);
+  -moz-transform: translateX(1.2px);
+  -ms-transform: translateX(1.2px);
+  -o-transform: translateX(1.2px);
+}
+.projress ul li.on-progress:before {
+  background-color: #fff;
+  animation-name: On-off;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
+}
+.projress ul li.not-done:before {
+  background-color: #fff;
+}
+@media (max-width: 767px) {
+  .projress img {
+    opacity: 0.1;
+    width: 300px;
+    right: -30px;
+    bottom: -15px;
+  }
+  .projress ul::before {
+    height: calc(100% - 55px);
+  }
+}
+/* End Projress */
+/* Start Reminder */
+.reminder .row {
+  border-left: 2px solid;
+  padding-left: 10px;
+  margin-left: 30px;
+}
+.reminder .row::before {
+  content: '';
+  position: absolute;
+  left: -30px;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+.reminder .row.blue {
+  border-color: var(--blue-color);
+}
+.reminder .row.blue::before {
+  background-color: var(--blue-color);
+}
+.reminder .row.green {
+  border-color: var(--green-color);
+}
+.reminder .row.green::before {
+  background-color: var(--green-color);
+}
+.reminder .row.orange {
+  border-color: var(--orange-color);
+}
+.reminder .row.orange::before {
+  background-color: var(--orange-color);
+}
+.reminder .row.red {
+  border-color: var(--red-color);
+}
+.reminder .row.red::before {
+  background-color: var(--red-color);
+}
+.reminder .row p {
+  font-size: 12px;
+}
+/* End Reminder */
 
-
-
-
+/* Start Animation */
+@keyframes On-off {
+  from {
+    background-color: #fff;
+  } 
+  to {
+    background-color: var(--blue-color);
+  } 
+}
+/* End Animation */
 
 
 
