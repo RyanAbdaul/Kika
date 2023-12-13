@@ -8,6 +8,7 @@
   --green-color: #22c55e;
   --red-color: #f44336;
   --grey-color: #888;
+  --fa-style-family-classic: "font Awesome 5 Free";
 }
 /* End Variables */
 /* Start Global Rules */
@@ -671,6 +672,54 @@ main header input[type="search"]:focus::placeholder {
   }
 }
 /* End Table */
+/* Start Settings */
+.toggle-checkbox {
+  -webkit-appearance: none;
+  appearance: none;
+}
+.toggle-switch {
+  width: 78px;
+  background: #CCC;
+  height: 32px;
+  border-radius: 16px;
+  cursor: pointer;
+  position: relative;
+  transition: var(--main-duration);
+  -webkit-transition: var(--main-duration);
+  -moz-transition: var(--main-duration);
+  -ms-transition: var(--main-duration);
+  -o-transition: var(--main-duration);
+}
+.toggle-switch::before {
+  font-family: var(--fa-style-family-classic);
+  content: '\f00d';
+  font-weight: 900;
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  background: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  left: 4px;
+  top: 4px;
+  color: #aaa;
+  transition: var(--main-duration);
+  -webkit-transition: var(--main-duration);
+  -moz-transition: var(--main-duration);
+  -ms-transition: var(--main-duration);
+  -o-transition: var(--main-duration);
+}
+.toggle-checkbox:checked + .toggle-switch {
+  background-color: var(--blue-color);
+}
+.toggle-checkbox:checked + .toggle-switch::before {
+  content: '\f00c';
+  font-weight: 900;
+  left: 50px;
+}
+/* End Settings */
 /* Start Animation */
 @keyframes On-off {
   from {
