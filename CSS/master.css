@@ -206,7 +206,7 @@ main header input[type="search"]:focus::placeholder {
 /* Start Wrapper */
 .wrapper {
   grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
-  margin: 0 20px;
+  margin: 0 20px 20px;
 }
 @media (max-width: 767px) {
   .wrapper {
@@ -548,7 +548,129 @@ main header input[type="search"]:focus::placeholder {
   font-size: 12px;
 }
 /* End Reminder */
-
+/* Start Latest Post */
+.latest-post .head {
+  border-bottom: var(--main-border-c);
+}
+.latest-post img {
+  width: 55px;
+}
+.latest-post > p {
+  line-height: 1.8;
+  border-bottom: var(--main-border-c);
+  min-height: 120px;
+}
+.latest-post .likes-comments .likes:hover {
+  color: var(--red-color);
+  cursor: pointer;
+}
+.latest-post .likes-comments .comments:hover {
+  color: var(--blue-color);
+  cursor: pointer;
+}
+/* End Latest Post */
+/* Start Social */
+.social ul li p {
+  flex: 1;
+}
+.social ul li {
+  height: 60px;
+}
+.social ul li p {
+  font-weight: bold;
+}
+.social ul li i {
+  width: 60px;
+  color: #fff;
+  display: flex;
+}
+.social ul li a {
+  color: #fff;
+}
+.social ul li.twitter {
+  background-color:#03a8f470;
+}
+.social ul li.twitter p {
+  color: #03A9F4;
+}
+.social ul li.twitter i,
+.social ul li.twitter a {
+  background-color: #03A9F4;
+}
+.social ul li.facebook {
+  background-color: rgba(13, 106, 213, 0.487);
+}
+.social ul li.facebook p {
+  color: var(--blue-color);
+}
+.social ul li.facebook i,
+.social ul li.facebook a {
+  background-color: var(--blue-color);
+}
+.social ul li.utube {
+  background-color: #f443366e;
+}
+.social ul li.utube p {
+  color: var(--red-color);
+}
+.social ul li.utube i,
+.social ul li.utube a {
+  background-color: var(--red-color);
+}
+.social ul li.linkedin {
+  background-color: #0076b57e;
+}
+.social ul li.linkedin p {
+  color: #0077b5;
+}
+.social ul li.linkedin i,
+.social ul li.linkedin a {
+  background-color: #0077b5;
+}
+/* End Social */
+/* Start Table */
+.responsive-table {
+  overflow-x: auto;
+}
+.responsive-table table {
+  min-width: 1000px;
+  border-spacing: 0;
+}
+.responsive-table table thead tr td {
+  font-weight: bold;
+  padding-left: 15px;
+  padding: 15px;
+}
+.responsive-table table tbody tr:hover td {
+  background-color: #faf7f7;
+  transition: var(--main-duration);
+  -webkit-transition: var(--main-duration);
+  -moz-transition: var(--main-duration);
+  -ms-transition: var(--main-duration);
+  -o-transition: var(--main-duration);
+}
+.responsive-table table tbody td:last-child {
+  border-right: var(--main-border-c);
+}
+.responsive-table table tbody td {
+  background-color: #fff;
+  padding: 15px;
+  border-bottom: var(--main-border-c);
+  border-left: var(--main-border-c);
+}
+.responsive-table table tbody td img {
+  width: 32px;
+  height: 32px;
+}
+.responsive-table table tbody td img:not(:first-child) {
+  margin-left: -20px;
+}
+@media (max-width: 767px) {
+  .projects {
+    margin: 10px !important;
+  }
+}
+/* End Table */
 /* Start Animation */
 @keyframes On-off {
   from {
