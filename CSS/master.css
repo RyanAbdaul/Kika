@@ -672,7 +672,9 @@ main header input[type="search"]:focus::placeholder {
   }
 }
 /* End Table */
-/* Start Settings */
+
+/*========================== Start Settings ========================== */
+/* Start Toggle Switch */
 .toggle-checkbox {
   -webkit-appearance: none;
   appearance: none;
@@ -719,7 +721,137 @@ main header input[type="search"]:focus::placeholder {
   font-weight: 900;
   left: 50px;
 }
-/* End Settings */
+/* End Toggle Switch */
+
+/* Start Site Control  */
+.settings-page .site-control textarea {
+  min-height: 140px;
+  border: var(--main-border-c);
+  width: calc(100% - 20px);
+  resize: none;
+}
+.settings-page .site-control textarea::placeholder {
+  font-size: 12px;
+}
+/* End Site Control  */
+/* Start General Info */
+.general-info input:not(:last-of-type) {
+  cursor: default;
+}
+/* End General Info */
+/* Start Security Info */
+.security-info .row:not(:last-child) {
+  border-bottom: var(--main-border-c);
+}
+.security-info .row button {
+  cursor: pointer;
+  font-size: 18px;
+}
+.security-info .row:not(:last-of-type) button:hover {
+  background-color: var(--blue-alt-color);
+}
+/* end Security Info */
+/* Start Social */
+.social-info .social-row {
+  flex-direction: row-reverse;
+}
+.social-info .social-row input {
+  background-color: transparent;
+}
+.social-info .social-row input::placeholder {
+  color: #888;
+  font-size: 13px;
+}
+.social-info .social-row i {
+  color: #888;
+  width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--main-duration);
+  -webkit-transition: var(--main-duration);
+  -moz-transition: var(--main-duration);
+  -ms-transition: var(--main-duration);
+  -o-transition: var(--main-duration);
+  border-right: 1px solid #ccc;
+}
+.social-info .social-row input:focus + i {
+  color: #000;
+}
+/* End Social */
+/* Start Wedgits Settings */
+.widget-settings label {
+  padding-left: 30px;
+  position: relative;
+  cursor: pointer;
+}
+.widget-settings label:hover::before {
+  border-color: var(--blue-color);
+}
+.widget-settings label::before,
+.widget-settings label::after {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  transition: var(--main-duration);
+  -webkit-transition: var(--main-duration);
+  -moz-transition: var(--main-duration);
+  -ms-transition: var(--main-duration);
+  -o-transition: var(--main-duration);
+}
+.widget-settings label::before {
+  content: '';
+  width: 18px;
+  height: 18px;
+  border: var(--main-border-c);
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+}
+.widget-settings label::after {
+  font-family: var(--fa-style-family-classic);
+  content: '\f00c';
+  font-weight: bold;
+  background-color: var(--blue-color);
+  color: #fff;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  transform: translateY(-50%) scale(0) rotate(360deg);
+  -webkit-transform: translateY(-50%) scale(0) rotate(360deg);
+  -moz-transform: translateY(-50%) scale(0) rotate(360deg);
+  -ms-transform: translateY(-50%) scale(0) rotate(360deg);
+  -o-transform: translateY(-50%) scale(0) rotate(360deg);
+}
+.widget-settings input[type="checkbox"]:checked + label::before {
+  box-shadow: 0px 0px 5px 2px var(--blue-alt-color);
+}
+.widget-settings input[type="checkbox"]:checked + label::after {
+  transform: translateY(-50%) scale(1) rotate(0deg);
+  -webkit-transform: translateY(-50%) scale(1) rotate(0deg);
+  -moz-transform: translateY(-50%) scale(1) rotate(0deg);
+  -ms-transform: translateY(-50%) scale(1) rotate(0deg);
+  -o-transform: translateY(-50%) scale(1) rotate(0deg);
+}
+.widget-settings input[type="checkbox"] {
+  -webkit-appearance: none;
+  appearance: none;
+}
+/* End Wedgits Settings*/
+/* Start */
+/* End */
+
+/*========================== End Settings ==========================*/
 /* Start Animation */
 @keyframes On-off {
   from {

@@ -84,9 +84,135 @@
         </div>
       </header>
       <!-- End Head  -->
-      <h1 class="relative">settings page</h1>
+      <h1 class="relative">settings</h1>
       <div class="settings-page">
-        
+        <div class="wrapper gap-20 d-grid">
+          <!-- Start Site Control -->
+          <div class="site-control box-style block-mobile">
+            <h2>site control</h2>
+            <p>Control The Website If There Is Maintenance</p>
+            <div class="set-box d-flex align-c mb-30">
+              <div class="text flex-grow">
+                <h3 class="fs-16 mb-5 c-888">Website Control</h3>
+                <p class="fs-14 c-888">Open/Close Website And Type The Reason</p>
+              </div>
+              <label>
+                <input class="toggle-checkbox" type="checkbox" checked>
+                <div class="toggle-switch"></div>
+              </label>
+            </div>
+            <textarea class="rad-10 border-none p-10 d-block" placeholder="close message content"></textarea>
+          </div>
+          <!-- End Site Control -->
+          <!-- Start General Info  -->
+          <div class="general-info box-style block-mobile">
+            <h2>General info</h2>
+            <p>General Information About Your Account</p>
+            <form class="d-flex direction-col ">
+              <label class="c-888 fs-14">username</label>
+              <input class="flex-grow c-888 mt-10 bg-eee border-none p-10 mb-20" type="text" readonly value="Rahmadita Azbillah Riska">
+              <label class="c-888 fs-14">password</label>
+              <input class="flex-grow c-888 mt-10 bg-eee border-none p-10 mb-20" type="password" readonly value="Rahm@dit@">
+              <label class="c-888 fs-14">email</label>
+              <input class="flex-grow c-888 mt-10 bg-eee border-none p-10" type="email" readonly value="Rahmadita@ILove.Ryan">
+            </form>
+          </div>
+          <!-- End General Info  -->
+          <!-- Start Security Info -->
+          <div class="security-info box-style block-mobile">
+            <h2>security info</h2>
+            <p>Security Information About Your Account</p>
+            <div class="row d-flex align-c pb-30 mb-15">
+              <div class="text flex-grow">
+                <h4 class="c-888">password</h4>
+                <p class="fs-14 c-888 mt-10">Last Change On 25/10/2021</p>
+              </div>
+              <button class="btn-shape border-none bg-blue">Change</button>
+            </div>
+            <div class="row d-flex align-c pb-30 mb-15">
+              <div class="text flex-grow">
+                <h4 class="c-888">Two-Factor Authentication</h4>
+                <p class="fs-14 c-888 mt-10">Enable/Disable The Feature</p>
+              </div>
+                <label>
+                  <input class="toggle-checkbox" type="checkbox" checked>
+                  <div class="toggle-switch"></div>
+                </label>
+            </div>
+            <div class="row d-flex align-c">
+              <div class="text flex-grow">
+                <h4 class="c-888">Devices</h4>
+                <p class="fs-14 c-888 mt-10">Check The Login Devices List</p>
+              </div>
+              <button class="btn-shape border-none c-black bg-eee">Devices</button>
+            </div>
+          </div>
+          <!-- End Security Info -->
+          <!-- Start Social Info -->
+          <div class="social-info box-style block-mobile">
+            <h2>social info</h2>
+            <p>Social Media Information</p>
+            <div class="social-row bg-eee border-ccc rad-6 d-flex mb-15">
+              <input class="border-none p-10 w-full" placeholder="Twitter username" type="text">
+              <i class="fa-brands fa-twitter c-888"></i>
+            </div>
+            <div class="social-row bg-eee border-ccc rad-6 d-flex mb-15">
+              <input class="border-none p-10 w-full" placeholder="Facebook username" type="text">
+              <i class="fa-brands fa-facebook-f c-888"></i>
+            </div>
+            <div class="social-row bg-eee border-ccc rad-6 d-flex mb-15">
+              <input class="border-none p-10 w-full" placeholder="linkedin username" type="text">
+              <i class="fa-brands fa-linkedin-in c-888"></i>
+            </div>
+            <div class="social-row bg-eee border-ccc rad-6 d-flex">
+              <input class="border-none p-10 w-full" placeholder="youtube username" type="text">
+              <i class="fa-brands fa-youtube c-888"></i>
+            </div>
+          </div>
+          <!-- End Social Info -->
+          <!-- Start Widgets setteings -->
+            <div class="widget-settings block-mobile box-style">
+              <h2>Widgets settings</h2>
+              <p>Show/Hide Widgets</p>
+              <form class="d-flex direction-col gap-10 fs-18">
+                <input class="mr-10" id="yearly-targets" type="checkbox" checked>
+                <label for="yearly-targets">
+                  yearly targets
+                </label>
+                <input class="mr-10" id="quick-draft" type="checkbox" checked>
+                <label for="quick-draft">
+                  quick draft
+                </label>
+                <input class="mr-10" id="teckits-stats" type="checkbox" checked>
+                <label for="teckits-stats">
+                  teckits stats
+                </label>
+                <input class="mr-10" id="latest-news" type="checkbox" checked>
+                <label for="latest-news">
+                  latest news
+                </label>
+                <input class="mr-10" id="latest-tasks" type="checkbox" checked>
+                <label for="latest-tasks">
+                  latest tasks
+                </label>
+                <input class="mr-10" id="top-search" type="checkbox" checked>
+                <label for="top-search">
+                  top search items
+                </label>
+                <input class="mr-10" id="members-team" type="checkbox">
+                <label for="members-team">
+                  Team members 
+                </label>
+              </form>
+            </div>
+          <!-- End Widgets setteings -->
+          <!-- Start Backup Manager -->
+            <div class="backup block-mobile box-style">
+              <h2>backup Manager</h2>
+              <p>Control Backup Time And Location</p>
+            </div>
+          <!-- End Backup Manager -->
+        </div>
       </div>
     </main>
   </div>
