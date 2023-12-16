@@ -834,7 +834,7 @@ main header input[type="search"]:focus::placeholder {
   -o-transform: translateY(-50%) scale(0) rotate(360deg);
 }
 .widget-settings input[type="checkbox"]:checked + label::before {
-  box-shadow: 0px 0px 5px 2px var(--blue-alt-color);
+  box-shadow: 0px 0px 5px 3px #0077ff57;
 }
 .widget-settings input[type="checkbox"]:checked + label::after {
   transform: translateY(-50%) scale(1) rotate(0deg);
