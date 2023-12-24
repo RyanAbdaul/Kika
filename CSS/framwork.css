@@ -25,6 +25,9 @@
 .align-e {
   align-items: end;
 }
+.warp {
+  flex-wrap: wrap;
+}
 .j-c {
   justify-content: center;
 }
@@ -71,14 +74,35 @@
 .p-20 {
   padding: 20px;
 }
+.p-30 {
+  padding: 20px;
+}
+.p-40 {
+  padding: 40px;
+}
+.p-50 {
+  padding: 50px;
+}
 .pt-20 {
   padding-top: 20px;
+}
+.pt-30 {
+  padding-top: 30px;
+}
+.pt-40 {
+  padding-top: 40px;
 }
 .pb-20 {
   padding-bottom: 20px;
 }
+.pb-40 {
+  padding-bottom: 40px;
+}
 .pb-30 {
   padding-bottom: 30px;
+}
+.pl-20 {
+  padding-left: 20px;
 }
 .mt-0 {
   margin-top: 0px;
@@ -209,6 +233,9 @@
 .fs-12 {
   font-size: 12px;
 }
+.fs-13 {
+  font-size: 13px;
+}
 .fs-14 {
   font-size: 14px;
 }
@@ -238,6 +265,12 @@
 }
 .txt-capitalize {
   text-transform: capitalize;
+}
+.up-case {
+  text-transform: uppercase;
+}
+.fw-normal {
+  font-weight: normal;
 }
 .fw-300 {
   font-weight: 300;
@@ -270,6 +303,12 @@
 }
 .border-ccc {
   border: 1px solid #ccc;
+}
+.border-b-ccc {
+  border-bottom: 1px solid #ccc;
+}
+.border-b-eee {
+  border-bottom: 1px solid #eee;
 }
 .rad-6 {
   border-radius: 6px;
@@ -354,11 +393,11 @@
   justify-content: center;
 }
 /* .main-title */
-.wrapper h2 {
+h2 {
   margin-bottom: 10px;
   text-transform: capitalize;
 }
-.wrapper h2 + p {
+h2 + p {
   color: #888;
   margin-bottom: 20px;
   text-transform: capitalize;

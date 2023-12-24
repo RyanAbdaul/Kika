@@ -32,37 +32,37 @@
           </a>
         </li>
         <li>
-          <a class="d-flex align-c fs-14 p-10 rad-6" href="dashboard.html">
+          <a class="d-flex align-c fs-14 p-10 rad-6" href="profile.html">
             <i class="fa-regular fa-user fa-fw mr-10"></i>
             <span>Profile</span>
           </a>
         </li>
         <li>
-          <a class="d-flex align-c fs-14 p-10 rad-6" href="dashboard.html">
+          <a class="d-flex align-c fs-14 p-10 rad-6" href="project.html">
             <i class="fa-solid fa-diagram-project fa-fw mr-10"></i>
             <span>Project</span>
           </a>
         </li>
         <li>
-          <a class="d-flex align-c fs-14 p-10 rad-6" href="dashboard.html">
+          <a class="d-flex align-c fs-14 p-10 rad-6" href="courses.html">
             <i class="fa-solid fa-graduation-cap fa-fw mr-10"></i>
             <span>Courses</span>
           </a>
         </li>
         <li>
-          <a class="d-flex align-c fs-14 p-10 rad-6" href="dashboard.html">
+          <a class="d-flex align-c fs-14 p-10 rad-6" href="friends.html">
             <i class="fa-solid fa-user-group fa-fw mr-10"></i>
             <span>Friends</span>
           </a>
         </li>
         <li>
-          <a class="d-flex align-c fs-14 p-10 rad-6" href="dashboard.html">
+          <a class="d-flex align-c fs-14 p-10 rad-6" href="files.html">
             <i class="fa-regular fa-file fa-fw mr-10"></i>
             <span>Files</span>
           </a>
         </li>
         <li>
-          <a class="d-flex align-c fs-14 p-10 rad-6" href="dashboard.html">
+          <a class="d-flex align-c fs-14 p-10 rad-6" href="plans.html">
             <i class="fa-regular fa-credit-card fa-fw mr-10"></i>
             <span>Plans</span>
           </a>
@@ -114,7 +114,7 @@
               <label class="c-888 fs-14">password</label>
               <input class="flex-grow c-888 mt-10 bg-eee border-none p-10 mb-20" type="password" readonly value="Rahm@dit@">
               <label class="c-888 fs-14">email</label>
-              <input class="flex-grow c-888 mt-10 bg-eee border-none p-10" type="email" readonly value="Rahmadita@ILove.Ryan">
+              <input class="flex-grow c-888 mt-10 bg-eee border-none p-10" type="email" disabled value="Rahmadita@ILove.Ryan">
             </form>
           </div>
           <!-- End General Info  -->
@@ -210,7 +210,43 @@
             <div class="backup block-mobile box-style">
               <h2>backup Manager</h2>
               <p>Control Backup Time And Location</p>
+              <div class="date d-flex align-center mb-15">
+                <input type="radio" name="time" id="daily" checked="">
+                <label for="daily">Daily</label>
+              </div>
+              <div class="date d-flex align-center mb-15">
+                <input type="radio" name="time" id="weekly">
+                <label for="weekly">Weekly</label>
+              </div>
+              <div class="date d-flex align-center pb-30 border-b-ccc ">
+                <input type="radio" name="time" id="monthly">
+                <label for="monthly">Monthly</label>
+              </div>
+              <div class="server mt-20 d-flex gap-10">
+                <input type="radio" name="servers" id="server-one">
+                <div class="d-flex direction-col align-c border-ccc w-full rad-10">
+                  <label class="d-flex direction-col txt-c gap-10 w-full" for="server-one">
+                    <i class="fa-solid fa-server"></i>
+                    migaman
+                  </label>
+                </div>
+                <input type="radio" name="servers" checked id="server-two">
+                <div class="d-flex direction-col align-c border-ccc w-full rad-10">
+                  <label class="d-flex direction-col txt-c gap-10 w-full" for="server-two">
+                    <i class="fa-solid fa-server"></i>
+                    zero
+                  </label>
+                </div>
+                <input type="radio" name="servers" id="server-three">
+                <div class="d-flex direction-col align-c border-ccc w-full rad-10">
+                  <label class="d-flex direction-col txt-c gap-10 w-full" for="server-three">
+                    <i class="fa-solid fa-server"></i>
+                    sigma
+                  </label>
+                </div>
+              </div>
             </div>
+            
           <!-- End Backup Manager -->
         </div>
       </div>

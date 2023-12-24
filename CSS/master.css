@@ -12,6 +12,54 @@
 }
 /* End Variables */
 /* Start Global Rules */
+/* Start Toggle Switch */
+.toggle-checkbox {
+  -webkit-appearance: none;
+  appearance: none;
+}
+.toggle-switch {
+  width: 78px;
+  background: #CCC;
+  height: 32px;
+  border-radius: 16px;
+  cursor: pointer;
+  position: relative;
+  transition: var(--main-duration);
+  -webkit-transition: var(--main-duration);
+  -moz-transition: var(--main-duration);
+  -ms-transition: var(--main-duration);
+  -o-transition: var(--main-duration);
+}
+.toggle-switch::before {
+  font-family: var(--fa-style-family-classic);
+  content: '\f00d';
+  font-weight: 900;
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  background: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  left: 4px;
+  top: 4px;
+  color: #aaa;
+  transition: var(--main-duration);
+  -webkit-transition: var(--main-duration);
+  -moz-transition: var(--main-duration);
+  -ms-transition: var(--main-duration);
+  -o-transition: var(--main-duration);
+}
+.toggle-checkbox:checked + .toggle-switch {
+  background-color: var(--blue-color);
+}
+.toggle-checkbox:checked + .toggle-switch::before {
+  content: '\f00c';
+  font-weight: 900;
+  left: 50px;
+}
+/* End Toggle Switch */
 *,
 ::before,
 ::after {
@@ -675,54 +723,11 @@ main header input[type="search"]:focus::placeholder {
 
 /*========================== Start Settings ========================== */
 /* Start Toggle Switch */
-.toggle-checkbox {
-  -webkit-appearance: none;
-  appearance: none;
-}
-.toggle-switch {
-  width: 78px;
-  background: #CCC;
-  height: 32px;
-  border-radius: 16px;
-  cursor: pointer;
-  position: relative;
-  transition: var(--main-duration);
-  -webkit-transition: var(--main-duration);
-  -moz-transition: var(--main-duration);
-  -ms-transition: var(--main-duration);
-  -o-transition: var(--main-duration);
-}
-.toggle-switch::before {
-  font-family: var(--fa-style-family-classic);
-  content: '\f00d';
-  font-weight: 900;
-  width: 24px;
-  height: 24px;
-  position: absolute;
-  background: #fff;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  left: 4px;
-  top: 4px;
-  color: #aaa;
-  transition: var(--main-duration);
-  -webkit-transition: var(--main-duration);
-  -moz-transition: var(--main-duration);
-  -ms-transition: var(--main-duration);
-  -o-transition: var(--main-duration);
-}
-.toggle-checkbox:checked + .toggle-switch {
-  background-color: var(--blue-color);
-}
-.toggle-checkbox:checked + .toggle-switch::before {
-  content: '\f00c';
-  font-weight: 900;
-  left: 50px;
-}
-/* End Toggle Switch */
 
+/* End Toggle Switch */
+.settings-page :disabled {
+  cursor: no-drop;
+}
 /* Start Site Control  */
 .settings-page .site-control textarea {
   min-height: 140px;
@@ -784,6 +789,7 @@ main header input[type="search"]:focus::placeholder {
   padding-left: 30px;
   position: relative;
   cursor: pointer;
+  width: fit-content;
 }
 .widget-settings label:hover::before {
   border-color: var(--blue-color);
@@ -847,11 +853,339 @@ main header input[type="search"]:focus::placeholder {
   -webkit-appearance: none;
   appearance: none;
 }
-/* End Wedgits Settings*/
-/* Start */
-/* End */
+/* End Wedgits Settings */
+/* Start BackUp */
+.backup input[type="radio"] {
+  -webkit-appearance: none;
+  appearance: none;
+}
+.backup .date label {
+  padding-left: 30px;
+  cursor: pointer;
+  position: relative;  
+  font-size: 20px;
+}
+.backup .date label::before,
+.backup .date label::after {
+  content: '';
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  transition: var(--main-duration);
+  -webkit-transition: var(--main-duration);
+  -moz-transition: var(--main-duration);
+  -ms-transition: var(--main-duration);
+  -o-transition: var(--main-duration);
+}
+.backup .date label::before {
+  border: 2px solid var(--grey-color);
+  width: 18px;
+  height: 18px;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+}
+.backup .date input:checked + label::before {
+  border-color: var(--blue-color);
+}
+.backup .date label::after {
+  width: 12px;
+  height: 12px;
+  background-color: var(--blue-color);
+  opacity: 0;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+}
+.backup .date input:checked + label::after {
+  opacity: 1;
 
+}
+.backup .server div {
+  transition: var(--main-duration);
+  -webkit-transition: var(--main-duration);
+  -moz-transition: var(--main-duration);
+  -ms-transition: var(--main-duration);
+  -o-transition: var(--main-duration);
+}
+.backup .server div label {
+  cursor: pointer;
+  padding: 25px 0;
+  font-weight: bold;
+}
+.backup .server input:checked + div,
+.backup .server input:checked + div label {
+  border-color: var(--blue-color) !important;
+  color: var(--blue-color);
+}
+/* End BackUp */
 /*========================== End Settings ==========================*/
+/*========================== Start Profile ==========================*/
+.profile-page .overview {
+  padding: 0;
+  flex-direction: column;
+}
+.profile-page .overview .avatar-box {
+  width: 250px;
+}
+@media (min-width: 768px) {
+  .profile-page .overview {
+    flex-direction: row;
+  }
+  .profile-page .overview .avatar-box {
+    border-right: var(--main-border-c);
+    
+  }
+}
+.profile-page .overview .avatar-box img {
+  width: 120px;
+  height: 120px;
+  margin: auto auto 20px  
+}
+.profile-page .overview .avatar-box .progress {
+  height: 5px;
+  margin: 15px auto;
+  width: 70%;
+}
+.profile-page .overview .avatar-box .progress span {
+  width: 70%;
+}
+.profile-page .overview .avatar-box .rating {
+  margin: auto auto 10px;
+}
+.profile-page .overview .avatar-box .rating i {
+  color: #FFC107;
+}
+.overview .info-box .row {
+  flex-wrap: wrap;
+  transition: var(--main-duration);
+  -webkit-transition: var(--main-duration);
+  -moz-transition: var(--main-duration);
+  -ms-transition: var(--main-duration);
+  -o-transition: var(--main-duration);
+  text-align: start;
+}
+.overview .info-box .row:hover {
+  background-color: #f9f9f9;
+}
+.overview .info-box .row > div {
+  padding-top: 10px;
+  margin-right: 10px;
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .overview .info-box .row > div {
+    min-width: 300px;
+    width: fit-content;
+  }
+}
+/* Start Skills */
+.container-box .skills {
+  flex-basis: 30%;
+}
+.container-box .skills .row:not(:last-of-type) {
+  margin: 20px 0;
+}
+.container-box .latest-activities h4 {
+  text-align: end;
+}
+.container-box .latest-activities .row {
+  padding: 15px 0;
+}
+.container-box .latest-activities img {
+  width: 70px;
+}
+@media (max-width: 767px) {
+  .container-box .latest-activities img {
+    margin-right: 0;
+  }
+  .container-box .latest-activities .row {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+  .container-box .latest-activities .row h4 {
+    text-align: center;
+  } 
+}
+/* End Skills */
+/* ========================== End Profile ========================== */
+/* ========================== Start Project ========================== */
+.projects-page img {
+  width: 35px;
+  height: 35px;
+  border: 2px solid #fff;
+  position: relative;
+  cursor: pointer;
+}
+.projects-page img:hover {
+  z-index: 2;
+}
+.projects-page img:not(:first-of-type) {
+  margin-left: -20px;
+}
+.projects-page h2 {
+  font-size: 17px;
+  font-weight: normal;
+}
+.projects-page h2 + p {
+  font-size: 15px;
+  margin-bottom: 50px;
+}
+.projects-page .proj-box .info {
+  border-bottom: 1px solid #eee;
+  border-top: 1px solid #eee;
+  justify-content: end;
+} 
+.projects-page .proj-box .progress .score {
+  width: 250px;
+  height: 8px;
+  background-color: #eee;
+}
+@media (max-width: 767px) {
+  .projects-page .proj-box .info,
+  .projects-page .proj-box .progress {
+    flex-direction: column;
+    padding-left: 0;
+  }
+  .projects-page .proj-box .info span {
+    margin: 10px 0 0;
+  }
+}
+/* ========================== End Project ========================== */
+/* ========================== Start Courses ========================== */
+.courses-page .wrapper {
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+.courses-page .course {
+  padding: 0;
+}
+.courses-page .course .thumnale {
+  max-width: 100%;
+}
+.courses-page .course .logo {
+  width: 60px;
+  height: 60px;
+  border: 2px solid #fff;
+  top: 20px;
+  left: 20px;
+}
+.courses-page .course .title p {
+  line-height: 1.6;
+  font-size: 15px;
+}
+.courses-page .course .stats {
+  border-top: 1px solid #eee;
+  position: relative;
+}
+.courses-page .course .stats::before {
+  content: 'Course Info';
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--blue-color);
+  color: #fff;
+  padding: 5px 10px;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  font-size: 13px;
+  transform: translate(-50%, -50%);
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  cursor: pointer;
+}
+.courses-page .course .stats::before:hover {
+  background-color: var(--blue-alt-color);
+}
+/* ========================== End Courses ========================== */
+/* ========================== Start Friends ========================== */
+.friends-page .wrapper {
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+.friends-page .member-box .head i {
+  font-family: var(--fa-style-family-classic);
+  font-weight: bold;
+  position: absolute;
+  padding: 10px;
+  background-color: #eee;
+  font-size: 12px;
+  top: 10px;
+  transition: var(--main-duration);
+  -webkit-transition: var(--main-duration);
+  -moz-transition: var(--main-duration);
+  -ms-transition: var(--main-duration);
+  -o-transition: var(--main-duration);
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  cursor: pointer;
+}
+.friends-page .member-box .head .call {
+  left: 10px;
+}
+.friends-page .member-box .head i:hover {
+  background-color: var(--blue-color);
+  color: #fff;
+}
+.friends-page .member-box .head .mail {
+  left: 50px;
+}
+.friends-page .member-box .head img {
+  width: 100px;
+  height: 100px;
+}
+.friends-page .member-box .head h3 {
+  font-size: 17px;
+}
+.friends-page .member-box .head p {
+  font-size: 13px;
+}
+.friends-page .member-box .info {
+  padding: 0;
+}
+.friends-page .member-box .info .details {
+  margin-bottom: 15px;
+}
+.friends-page .member-box .info .details span {
+  font-size: 14px;
+}
+.friends-page .member-box .info .details i {
+  margin-right: 5px;
+}
+.friends-page .member-box .info .vip {
+  font-size: 40px;
+  color: #ffc1073b;
+  letter-spacing: 5px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.friends-page .member-box .foot span {
+  margin: 0;
+  font-size: 14px;
+}
+/* ========================== End Friends ========================== */
+/* ========================== Start ========================== */
+/* ========================== End  ========================== */
 /* Start Animation */
 @keyframes On-off {
   from {
