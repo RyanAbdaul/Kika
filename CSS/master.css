@@ -225,7 +225,7 @@ main header form > i {
 }
 main header input[type="search"] {
   border: 1px solid #ccc;
-  width: 180px;
+  width: 170px;
   padding-left: 35px;
   transition: var(--main-duration);
   -webkit-transition: var(--main-duration);
@@ -234,7 +234,7 @@ main header input[type="search"] {
   -o-transition: var(--main-duration);
 }
 main header input[type="search"]:focus {
-  width: 220px;
+  width: 200px;
 }
 main header input[type="search"]:focus::placeholder {
   opacity: 0;
